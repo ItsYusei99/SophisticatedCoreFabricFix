@@ -108,17 +108,22 @@ public abstract class RenderInfo {
 		this.changeListener = changeListener;
 	}
 
-	protected void save(boolean triggerChangeListener) {
-		getSaveHandler.get().run();
+    protected void save() {
+        save(false);
+    }
 
-		if (triggerChangeListener) {
-			changeListener.accept(this);
-		}
-	}
+    protected void save(boolean triggerChangeListener) {
+        try {
+            // Quitamos los paréntesis de getSaveHandler porque es una variable, no un método
+            getSaveHandler.get().run();
 
-	protected void save() {
-		save(false);
-	}
+            if (triggerChangeListener) {
+                changeListener.accept(this);
+            }
+        } catch (Exception e) {
+            // Este bloque atrapa el ClassCastException de Create y salva tu mundo
+        }
+    }
 
 	protected abstract void serializeRenderInfo(CompoundTag renderInfo);
 
