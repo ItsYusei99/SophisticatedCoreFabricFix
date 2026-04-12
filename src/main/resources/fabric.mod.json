@@ -1,11 +1,11 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "itsyusei99-storage-create-compat",
 	"version": "${version}",
-	"name": "Example Mod",
+	"name": "Sophisticated Storage Fabric Create Compat",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"ItsYusei99"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
@@ -16,7 +16,7 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
+			"com.com.storagecompat.StorageCompat"
 		],
 		"client": [
 			"com.example.client.ExampleModClient"
