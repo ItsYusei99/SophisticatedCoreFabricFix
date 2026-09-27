@@ -1,9 +1,24 @@
-# Example Mod
+# SophisticatedCore — Fix de compatibilidad (Fabric)
 
-## Setup
+Parche de compatibilidad para **Sophisticated Core** en **Fabric** (Minecraft 1.20.1): ajusta el comportamiento de movimiento/almacenamiento (`StorageCompat`, `SophisticatedMovementBehaviour`).
 
-For setup instructions, please see the [Fabric Documentation page](https://docs.fabricmc.net/develop/getting-started/creating-a-project#setting-up) related to the IDE that you are using.
+## Requisitos
 
-## License
+- Java 17
+- Gradle (incluye wrapper)
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+## Compilar
+
+```bash
+./gradlew build
+```
+
+El `jar` queda en `build/libs/`. Hay un workflow de CI (`.github/workflows/build.yml`) que compila cada push.
+
+## Versiones
+
+- Minecraft 1.20.1 · Fabric Loader 0.18.6 · Mod v1.0.0
+
+## Licencia
+
+CC0 — ver [`LICENSE`](LICENSE).
